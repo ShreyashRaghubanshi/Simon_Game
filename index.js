@@ -25,7 +25,7 @@ function nextSequence(){
     gamePattern.push(randomColor);
 
     $("."+randomColor).fadeIn(100).fadeOut(100).fadeIn(100);
-    var audio=new Audio(+randomColor+".mp3");
+    var audio=new Audio(randomColor+".mp3");
     audio.play();
 }
 
@@ -43,7 +43,7 @@ function userSelection(e){
         $("."+userColor).removeClass("pressed");
     },100);
 
-    var audio=new Audio(+userColor+".mp3");
+    var audio=new Audio(userColor+".mp3");
     audio.play();
 
     if(gamePattern[userPattern.length-1]==userPattern[userPattern.length-1]){
